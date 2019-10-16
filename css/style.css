@@ -22,6 +22,7 @@ html, body {
     width: 100%;
     position: relative;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -29,7 +30,7 @@ body {
 }
 
 .wrapper {
-    width: 90vw;
+    width: 90%;
     max-width: 1250px;
     margin: 0 auto;
     color: var(--black-color);
@@ -50,6 +51,8 @@ body {
 
 /* header */
 .header {
+    width: 100%;
+    position: absolute;
     z-index: 2;
 }
 
@@ -176,10 +179,8 @@ body {
 .hero {
     width: 100%;
     background: url("../img/code.jpg") no-repeat center/cover;
-    position: absolute;
-    top: 0;
-    left: 0;
     z-index: -2;
+    margin-bottom: 4rem;
 }
 
 .hero-shadow {
@@ -206,7 +207,7 @@ body {
 }
 
 .hero-btn-wrapper {
-    margin: 1rem 0;
+    margin: 1rem 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -214,9 +215,9 @@ body {
 }
 
 .hero-btn {
-    width: 50%;
+    width: 60%;
     margin-top: 2rem;
-    padding: 0.6rem 1rem;
+    padding: 0.8rem 1rem;
     color: var(--white-color);
     border: 1.5px solid var(--white-color);
     border-radius: 10px;
@@ -229,8 +230,76 @@ body {
     background: var(--blue-color);
 }
 
+/* about-us */
+.about-us {
+    margin-bottom: 3rem;
+    -webkit-animation: show 3s ease-in;
+            animation: show 3s ease-in;
+}
+
+.third-header {
+    margin: 0 0 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.about-us-wrapper {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.info {
+    width: 100%;
+    padding-right: 0;
+}
+
+.info-paragraph {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.info-paragraph:last-of-type {
+    margin-bottom: 2rem;
+}
+
+.competences {
+    width: 100%;
+    margin-top: 1rem;
+    padding-left: 0;
+    line-height: 1.5;
+}
+
+.competences-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1/5;
+}
+
+.competences-list li {
+    margin-top: 0.5rem;
+}
+
+.competences-list span {
+    margin-right: 0.5rem;
+}
+
 /* media queries*/
 @media only screen and (min-width: 1000px) {
+    /* header */
     .header-wrapper {
         align-items: flex-start;
     }
@@ -264,5 +333,31 @@ body {
 
     .hamburger {
         display: none;
+    }
+
+    /* about-us */
+    .about-us {
+        margin-bottom: 5rem;
+    }
+
+    .about-us-header {
+        margin: 0 0 2rem;
+    }
+
+    .about-us-wrapper {
+        text-align: left;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+    }
+
+    .info {
+        width: 65%;
+        margin-right: 4rem;
+    }
+
+    .competences {
+        width: 30%;
     }
 }
