@@ -299,6 +299,10 @@ body {
 }
 
 /* members */
+.team {
+    margin-bottom: 5rem;
+}
+
 .members-box {
     display: flex;
     flex-direction: column;
@@ -377,9 +381,114 @@ body {
     border-radius: 50%;
 }
 
+/* contact */
+.contact {
+    margin-bottom: 1rem;
+}
+
+.form-info-wrapper {
+    padding: 2rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-animation: show 3s ease-in;
+    animation: show 3s ease-in;
+}
+
+.form {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.form label {
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem 0 0.5rem 0;
+}
+
+.form label:first-of-type {
+    padding-top: 0;
+}
+
+.form input {
+    width: 100%;
+}
+
+.message {
+    width: 100%;
+    height: 20vh;
+    margin-bottom: 2rem;
+    resize: vertical;
+}
+
+.submit {
+    padding: 0.6rem 2.5rem;
+    font-size: 1rem;
+    color: var(--white-color);
+    background: var(--blue-color);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    transition: background 0.5s;
+    margin: 0 auto;
+}
+
+.submit:hover {
+    background: var(--green-color);
+}
+
+.contact-info {
+    width: 100%;
+    padding-right: 0.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.contact-info::after {
+    content: "";
+    height: 100%;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: -2rem;
+}
+
+.contact-info p {
+    margin: 1.5rem 0 0;
+    line-height: 2;
+    font-style: normal;
+}
+
+.contact-info a {
+    color: var(--black-color);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: var(--green-color);
+    text-decoration: underline;
+}
+
 /* media queries*/
 @media only screen and (min-width: 1000px) {
-
     /* header */
     .header-wrapper {
         align-items: flex-start;
@@ -442,6 +551,7 @@ body {
         width: 30%;
     }
 
+    /* team */
     .members-box {
         flex-direction: row;
     }
@@ -465,5 +575,43 @@ body {
     .right-members-box .member {
         flex-direction: row;
         justify-content: flex-start;
+    }
+
+    /* contact */
+    .form-info-wrapper {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+
+    .form {
+        width: 60%;
+    }
+
+    .form label {
+        width: 90%;
+        text-align: left;
+    }
+
+    .form input {
+        width: 90%;
+    }
+
+    .message {
+        width: 90%;
+    }
+
+    .submit {
+        margin: 0;
+    }
+
+    .contact-info {
+        width: 40%;
+        text-align: left;
+    }
+
+    .contact-info::after {
+        border: 0.5px solid var(--blue-color);
     }
 }
